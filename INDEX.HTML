@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Choose expenses amount:<input type="number" id="expenseAmount" placeholder="Choose expense amount">
+       Choose description: <input type="text" id="expenseDescription" placeholder="Choose description">
+        Choose a category: <select id="expenseCategory">
+            <option value="food">food</option>
+            <option value="electricity">electricity</option>
+            <option value="movie">movie</option>
+    
+        </select>
+        <button onclick="addExpense()">Add Expense</button>
+    </div>
+    <ul id="expenseList"></ul>
+    
+    <script src="index.js"></script>
+</body>
+</html>
