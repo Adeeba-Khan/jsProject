@@ -7,18 +7,26 @@
 </head>
 <body>
     <div>
-        Choose expenses amount:<input type="number" id="expenseAmount" placeholder="Choose expense amount">
-       Choose description: <input type="text" id="expenseDescription" placeholder="Choose description">
-        Choose a category: <select id="expenseCategory">
-            <option value="food">food</option>
-            <option value="electricity">electricity</option>
-            <option value="movie">movie</option>
+        <form onsubmit="handleFormSubmit(event)">
+        <label for="sellingPrice">Selling Price</label><input type="number" name="sellingPrice" id="sellingPrice" placeholder="Choose selling Price">
+       <label for="productName"> Name:</label><input type="text" name="productName" id="productName" placeholder="Choose Product">
+        Choose a category: <select name="productCategory" id="productCategory">
+            <option value="electronic">Electronic</option>
+            <option value="food">Food</option>
+            <option value="skincare">Skincare</option>
     
         </select>
-        <button onclick="addExpense()">Add Expense</button>
-    </div>
-    <ul id="expenseList"></ul>
+        <button type="submit">Add Product</button>
     
+</form>
+</div>
+<h2>Products</h2>
+<ul id="productList">
+    <ul id="electronicItems">Electronic Items</ul>
+    <ul id="foodItems">Food Items</ul>
+    <ul id="skincareItems">Skincare Items</ul>
+</ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
